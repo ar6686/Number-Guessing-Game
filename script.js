@@ -1,7 +1,6 @@
 const minnum = 1;
 const maxnum = 100;
 let answer = Math.floor(Math.random() * (maxnum - minnum + 1)) + minnum;
-console.log(answer);
 
 let attempt = 0;
 let guessInput = document.querySelector('.numberBox input');
@@ -48,7 +47,6 @@ restartButton.addEventListener('click', ()=>{
   answer = Math.floor(Math.random() * (maxnum - minnum + 1)) + minnum;
   guessInput.value = "";
   guessInput.disabled = false;
-  console.log(answer);
   submitButton.style.display = 'flex'
   restartButton.style.display = 'none'
   result.innerHTML = "";
