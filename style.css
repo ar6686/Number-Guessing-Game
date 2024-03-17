@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(24, 58, 73);
+    margin: 5% ;
+    color: rgb(255, 255, 255);
+    /* width: 600px; */
+    padding: 20px;
+    border-radius: 20px;
+}
+.guess::after{
+    content: '';
+    display: block;
+    width: 60%;
+    height: 5px;
+    background-color: rgb(255, 65, 65);
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+.guess{
+    text-align: center;
+    line-break: none;
+}
+.guess b{
+    color: rgb(255, 37, 37);
+    font-size: 40px;
+}
+.numberBox{
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    color: antiquewhite;
+}
+.numberBox input{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: antiquewhite;
+    background-color: rgb(24, 58, 73);
+    margin-top: -10px;
+    border: 4px solid orange;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px rgb(14, 14, 14)
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 20px;
+    gap: 20px;
+}
+.btn{
+    background-color: rgb(255, 65, 65);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.restartBtn{
+    display: none;
+}
+.btn:hover{
+    background-color: rgb(255, 37, 37);
+    box-shadow: 0 0 10px rgb(108, 105, 105);
+    transition: 0.2s;
+
+}
+.guessAgain{
+    display: flex;
+    justify-content: space-around;
+    gap: 140px;
+}
+.result{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+#h2withbr{
+    display: none;
+}
+@media(max-width:680px){
+    #h2withoutbr{
+        display: none;
+    }
+    #h2withbr{
+        display: flex;
+    }
+    .numberBox input{
+        margin-top: 3px;
+    }
+    .numberBox{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media(max-width:480px){
+    .container{
+        margin: 5px;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: medium;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .guess{
+        font-size: 12px;
+    }
+    .guess b{
+        font-size: 30px;
+    }
+    .numberBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
